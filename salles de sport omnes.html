@@ -3,22 +3,14 @@
 
 <head>
     <meta charset="utf-8">
-    <link href="rendez_vous.css" rel="stylesheet" type="text/css" />
+    <link href="gym .css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sportify</title>
 </head>
-<script>
-    function confirmerAnnulation() {
-        var confirmation = confirm("Voulez-vous vraiment annuler votre rendez-vous??");
-        if (confirmation) {
-            alert("Rendez-vous annulé");
-        } else {
-            alert("Retour");
-        }
-    }
-</script>
+
 <body>
-<button onclick="confirmerAnnulation()">Annuler Rendez-vous</button>
+
+
 <div id="nav">
     <a href="acceuil.html" class="nav-button">Acceuil</a>
     <a href="tout_parcourir.html" class="nav-button">Tout Parcourir</a>
@@ -26,8 +18,26 @@
     <a href="rdv.html" class="nav-button">Rendez-Vous</a>
     <a href="votre_compte.html" class="nav-button">Votre Compte</a>
 </div>
+
+
 <div id="header">
-    <h1> Sportify: Rendez vous </h1>
+    <h1> Sportify: Salles de sport Omnes </h1>
 </div>
+
+<div id="section">
+
+
+
+    <ul id="gym-list">
+        <li class="gym-item">
+            <h1>Salle de sport OMNES</h1>
+            <a href="gym1.html">
+                <img src="gym1.jpg" alt="Gym" width="800" height="400">
+            </a>
+        </li>
+    </ul>
+
+</div>
+
 </body>
 </html>
