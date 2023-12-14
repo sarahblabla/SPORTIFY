@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation Sportive</title>
+    <link rel="stylesheet" href="2.css">
+</head>
+<body>
+                <div class="bordure-exterieure">
+                  <div class="bordure-interieure-haut"> 
+                    <div class="meme-ligne">      
+                        <span class="texte-rouge">Sportify:</span>
+                        <span class="texte-bleu">Consultation Sportive</span>
+                        <img src="Sportify.png" alt="Sportify"> 
+                    </div>
+                  </div>
+                </div>
+            <div class="bordure-interieure-milieu1"> 
+                  <br>
+                  <a href="acceuil.html" class="nav-bouton">Accueil</a>
+                  <a href="tout_parcourir.html" class="nav-bouton">Tout Parcourir </a>
+                  <a href="rechercher.html" class="nav-bouton">Recherche</a>
+                  <a href="rdv.html" class="nav-bouton">Rendez-vous</a>
+                  <a href="index.html" class="nav-bouton">Votre Compte</a>
+            </div>
+        </div>
+        <div class="bordure-interieure-milieu2">
+            <img src="porteouvertes.jpg" alt="porte ouvertes">
+            <img src="tennis.jpg" alt="tennis">
+            <img src="cycle.jpg" alt="cycle">
+            <img src="piscine.jpg" alt="piscine">
+            <img src="cardio.jpg" alt="cardio">
+            <img src="musculation.jpg" alt="musculation">
+        </div>
+    <div class="bordure-interieure-bas">
+            <div class="title">
+             <h2>Nous Contacter</h2>
+              <div class="info-contact">
+                <p><strong>Adresse :</strong> 10 Rue Sextius Michel, 75015 Paris</p>
+                <p><strong>Téléphone :</strong> +0123456789</p>
+                <p><strong>Email :</strong> contact@spotifysport.com</p>
+              </div>
+              
+            </div>
+
+    </div>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+  let currentImage = 0;
+  const images = document.querySelectorAll('.bordure-interieure-milieu2 img');
+  
+  function showImage(index) {
+    for (let i = 0; i < images.length; i++) {
+      images[i].style.display = 'none';
+    }
+    images[index].style.display = 'block';
+  }
+  
+  function changeImage() {
+    currentImage = (currentImage + 1) % images.length;
+    showImage(currentImage);
+  }
+  
+  setInterval(changeImage, 4000); // Change l'image toutes les 3 secondes
+});
+
+</script>    
+    
+</body>
+</html>
+

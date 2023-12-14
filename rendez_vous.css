@@ -1,0 +1,45 @@
+#header {
+    color: #267F49;
+    text-align: center;
+    padding: 5px;
+    font-size:25px;
+}
+
+#nav {
+    line-height: 10px;
+    background-color: #eeeeee;
+    color: green;
+    height: 70px;
+    width: 100%;
+    float: left;
+    padding: 5px;
+    border: 1px #eeeeee;
+    font-size:25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-button {
+    background-color: forestgreen;
+    color: white;
+    border: none;
+    padding: 20px 60px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 10px; /* Coins arrondis */
+    cursor: pointer;
+}
+#section {
+
+    text-indent: 5px;
+    width: auto;
+    float: left;
+    width: 100%;
+    height: 640px;
+    color : green;
+    background:  #BFEE90;
+    font-size:25px;
+
+}
