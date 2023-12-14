@@ -6,9 +6,58 @@
     <link href="Activité_sportive.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sportify</title>
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            createSnowflakes();
+        });
+
+        function createSnowflakes() {
+            const numberOfSnowflakes = 50;
+            const body = document.body;
+
+            for (let i = 0; i < numberOfSnowflakes; i++) {
+                const snowflake = document.createElement("div");
+                snowflake.className = "snowflake";
+                snowflake.style.left = Math.random() * 100 + "vw";
+                snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
+                body.appendChild(snowflake);
+            }
+        }
+
+    </script>
+
+
+
 </head>
 
 <body>
+<div class="banner">
+    <span>Bienvenue sur Votre Site !</span>
+    <div class="login-form">
+        <a href="#login">Se connecter</a>
+        <a href="#signup">S'inscrire</a>
+    </div>
+</div>
+<div id="logo">
+    <h1>
+        <img src="sportify.png" alt="Musculation" width="300" height="170">
+    </h1>
+
+</div>
+
+
+
+<div id="header">
+    <h1>
+
+    Sportify: Activité Sportive  </h1>
+
+</div>
+
 
 
 <div id="nav">
@@ -17,11 +66,6 @@
     <a href="rechercher.html" class="nav-button">Rechercher</a>
     <a href="rdv.html" class="nav-button">Rendez-Vous</a>
     <a href="votre_compte.html" class="nav-button">Votre Compte</a>
-</div>
-
-
-<div id="header">
-    <h1> Sportify: Activité Sportive </h1>
 </div>
 
 <div id="section">

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #BFEE90, #eeeeee); /* Ajout d'un dégradé de couleur en double fond */
+            margin: 0; /* Pour enlever la marge par défaut du body */
+            font-family: Arial, sans-serif; /* Choisir une police générique */
+        }
+
+        #coach-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #coach-image {
+            width: 200px; /* Ajustez la taille de l'image selon vos besoins */
+            height: 200px; /* Ajustez la taille de l'image selon vos besoins */
+            border-radius: 50%; /* Rendre l'image arrondie */
+        }
+
+
+
+        #nav {
+            line-height: 10px;
+            background-color: #eeeeee;
+            color: green;
+            height: 70px;
+            width: 100%;
+            float: left;
+            padding: 5px;
+            border: 1px #eeeeee;
+            font-size:25px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-button {
+            background-color: forestgreen;
+            color: white;
+            border: none;
+            padding: 20px 60px;
+            text-align: center;
+            display: inline-block;
+            font-size: 20px;
+            border-radius: 40px; /* Coins arrondis */
+            cursor: pointer;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<div id="nav">
+    <a href="acceuil.html" class="nav-button">Acceuil</a>
+    <a href="tout_parcourir.html" class="nav-button">Tout Parcourir</a>
+    <a href="rechercher.html" class="nav-button">Rechercher</a>
+    <a href="rdv.html" class="nav-button">Rendez-Vous</a>
+    <a href="votre_compte.html" class="nav-button">Votre Compte</a>
+</div>
+
+
+
+
+
+<div id="coach-container">
+    <h1>Votre coach : David</h1>
+    <p>Il vous accompagnera lors de vos entraînements et vous aidera à vous améliorer!</p>
+    <img id="coach-image" src="coach_fitness.jpg" alt="Votre Coach">
+</div>
+
+</body>
+</html>

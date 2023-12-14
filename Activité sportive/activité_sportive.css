@@ -1,0 +1,121 @@
+#header {
+    color: black;
+    text-align: center;
+    padding: 5px;
+    font-size:15px;
+}
+body {
+    overflow: hidden;
+}
+
+.banner {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+}
+.banner a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+}
+.login-form {
+    display: inline-block;
+}
+
+
+
+
+.snowflake {
+    position: absolute;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: url('snow.png') no-repeat center center;
+    animation: fall linear infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+
+#logo{
+
+    height: 20px;
+    width: 20%;
+    text-align: left;
+
+}
+
+
+#nav {
+    line-height: 10px;
+    background-color: lightgrey;
+    color: darkseagreen;
+    height: 50px;
+    width: 100%;
+    float: left;
+    padding: 5px;
+    border: 10px #eeeeee;
+    font-size:25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-button {
+    background-color: #38b44b;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 40px; /* Coins arrondis */
+    cursor: pointer;
+}
+
+
+#section {
+
+    text-indent: 5px;
+    width: 100%; /* Ajustez la largeur selon vos besoins */
+    height: 100%; /* 100% de la hauteur de la vue (viewport height) */
+    color: green;
+    background: #BFEE90;
+    font-size: 25px;
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+
+
+}
+
+
+.sport-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.sport-item {
+    margin: 10px;
+    text-align: center;
+}
+
+.sport-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
