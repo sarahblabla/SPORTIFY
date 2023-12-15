@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness</title>
+    <style>
+        body {
+            background: linear-gradient(to right, darkslategray, #eeeeee);
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #nav {
+            line-height: 10px;
+            background-color: #eeeeee;
+            color: green;
+            height: 70px;
+            width: 100%;
+            float: left;
+            padding: 5px;
+            border: 1px #eeeeee;
+            font-size: 25px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-button {
+            background-color: forestgreen;
+            color: white;
+            border: none;
+            padding: 20px 60px;
+            text-align: center;
+            display: inline-block;
+            font-size: 20px;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+
+        #coach-container {
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #coach-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        #chat-box {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-width: 400px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        #message-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        #message-list li {
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+
+        #chat-input {
+            width: calc(100% - 20px);
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #send-button {
+            background-color: forestgreen;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="nav">
+    <a href="acceuil.html" class="nav-button">Acceuil</a>
+    <a href="tout_parcourir.html" class="nav-button">Tout Parcourir</a>
+    <a href="rechercher.html" class="nav-button">Rechercher</a>
+    <a href="rdv.html" class="nav-button">Rendez-Vous</a>
+    <a href="votre_compte.html" class="nav-button">Votre Compte</a>
+</div>
+
+<div id="coach-container">
+    <h1>Votre coach : David</h1>
+    <p>Il vous accompagnera lors de vos entraînements et vous aidera à vous améliorer!</p>
+    <img id="coach-image" src="coach_muscu.jpeg" alt="Votre Coach">
+    <div id="chat-box">
+        <ul id="message-list">
+            <!-- Exemple de message -->
+            <li>Coach: Bonjour! Alors prêt pour une séance de muscu ou quoi?</li>
+        </ul>
+        <textarea id="chat-input" placeholder="Commencez à tchater avec votre coach..."></textarea>
+        <button id="send-button" onclick="sendMessage()">Envoyer</button>
+    </div>
+</div>
+<script>
+    function sendMessage() {
+        var messageInput = document.getElementById("chat-input");
+        var messageList = document.getElementById("message-list");
+        var messageText = messageInput.value;
+
+        if (messageText.trim() !== "") {
+            var newMessage = document.createElement("li");
+            newMessage.textContent = "Vous: " + messageText;
+            messageList.appendChild(newMessage);
+            messageInput.value = ""; // Efface le contenu de la zone de texte après l'envoi
+        }
+    }
+</script>
+
+</body>
+</html>
