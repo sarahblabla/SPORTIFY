@@ -76,6 +76,7 @@
     $idCoach = 1;
     $idclient = 1;
     $salle = Salle_de_muscu;
+
     $adresse =Allée_de_la_muscu;
 
 
