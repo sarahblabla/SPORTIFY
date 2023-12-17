@@ -1,0 +1,90 @@
+#header {
+    color: darkgreen;
+    text-align: center;
+    font-size:25px;
+    padding-left: 150px;
+    padding-top: 80px;
+}
+
+#nav {
+    line-height: 10px;
+    background-color: #eeeeee;
+    color: green;
+    height: 70px;
+    width: 100%;
+    float: left;
+    padding: 5px;
+    border: 1px #eeeeee;
+    font-size:25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 100px;
+}
+
+.nav-button {
+    background-color: forestgreen;
+    color: white;
+    border: none;
+    padding: 20px 60px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 10px; /* Coins arrondis */
+    cursor: pointer;
+
+}
+
+.Email{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Message{
+    background-color: #eeeeee;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+form {
+    display: grid;
+    gap: 16px;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    grid-column: span 2; /* Étend le bouton sur 2 colonnes */
+}
+
+@media (min-width: 600px) {
+    form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #messageType {
+        grid-column: span 2; /* Si vous voulez que le menu déroulant occupe deux colonnes sur grand écran */
+    }
+}
+
+
+
+
+
