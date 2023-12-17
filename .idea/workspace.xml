@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b965367-dbe7-4c85-8d78-872393c1e53a" name="Changes" comment="Page salles de sport en cours">
-      <change afterPath="$PROJECT_DIR$/Nos services.html" afterDir="false" />
+    <list default="true" id="8b965367-dbe7-4c85-8d78-872393c1e53a" name="Changes" comment="image">
+      <change afterPath="$PROJECT_DIR$/recherche.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gym.css" beforeDir="false" afterPath="$PROJECT_DIR$/gym.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/salles de sport omnes.html" beforeDir="false" afterPath="$PROJECT_DIR$/salles de sport omnes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sportify.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +65,17 @@
       <workItem from="1702246019552" duration="11000" />
       <workItem from="1702753329267" duration="940000" />
       <workItem from="1702809809101" duration="613000" />
-      <workItem from="1702824396365" duration="1485000" />
+      <workItem from="1702824396365" duration="6515000" />
     </task>
+    <task id="LOCAL-00001" summary="image">
+      <option name="closed" value="true" />
+      <created>1702825933692</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702825933692</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -75,6 +83,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Page salles de sport en cours" />
-    <option name="LAST_COMMIT_MESSAGE" value="Page salles de sport en cours" />
+    <MESSAGE value="image" />
+    <option name="LAST_COMMIT_MESSAGE" value="image" />
   </component>
 </project>
