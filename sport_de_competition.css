@@ -83,6 +83,7 @@
 .sport-item {
     margin: 10px;
     text-align: center;
+    list-style: none;sssss
 }
 
 .sport-item img {
@@ -90,5 +91,13 @@
     height: 150px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+#texte{
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    margin-left: 100px;
+    padding-top: 80px;
 }
 
