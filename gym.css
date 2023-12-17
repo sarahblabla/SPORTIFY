@@ -57,21 +57,6 @@
     justify-content: space-around;
 }
 
-.sport-item {
-    margin: 10px;
-    text-align: center;
-}
-
-.sport-item img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-
-
-
 
 h2{
     color: hotpink;
