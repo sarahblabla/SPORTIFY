@@ -1,0 +1,104 @@
+<!--coach:
+- CV
+- son nom
+- sa photo
+- son bureau
+- sa disponibilité durant la semaine php
+- Si le coach est disponible : possibilité d'envoyer un message texto, vocale, par visioconférence ou meme communiquer avec lui.-->
+
+<html>
+<head>
+    <title> Coach Basketball </title>
+    <meta charset="utf-8">
+    <link href="coach_basketball.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="nav">
+    <a href="acceuil.html" class="nav-button">Acceuil</a>
+    <a href="tout_parcourir.html" class="nav-button">Tout Parcourir</a>
+    <a href="rechercher.html" class="nav-button">Rechercher</a>
+    <a href="rdv.html" class="nav-button">Rendez-Vous</a>
+    <a href="votre_compte.html" class="nav-button">Votre Compte</a>
+</div>
+
+<div id="header">
+    <h1> Coach de basketball </h1>
+</div>
+
+<div id="CV">
+    <h2> Nom du coach </h2>
+    <img src="coach_basketball.jpg" alt="CV du coach de basketball"  width="100" height="50"></img>
+</div>
+
+<div id="Dispo"></div>
+
+<button id="communiquerButton">Communiquer avec le coach</button>
+
+<div class="Message">
+    <form id="messageForm" action="process_message.php" method="post">
+        <label for="phone">Numéro de téléphone :</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="messageType">Type de message :</label>
+        <select id="messageType" name="messageType" required>
+            <option value="text">Message écrit</option>
+            <option value="voice">Message vocal</option>
+            <option value="both">Les deux</option>
+        </select>
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <label for="voiceMessage">Message vocal :</label>
+        <input type="file" id="voiceMessage" name="voiceMessage" accept="audio/*">
+
+        <input type="submit" value="Envoyer">
+    </form>
+</div>
+
+</div>
+
+<div class="Email">
+    <form id="emailForm" action="send_email.php" method="post">
+        <label for="email">Adresse e-mail :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Objet :</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <input type="submit" value="Envoyer">
+    </form>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var messageForm = document.getElementById('messageForm');
+        var emailForm = document.getElementById('emailForm');
+        var communiquerButton = document.getElementById('communiquerButton');
+
+        communiquerButton.addEventListener('click', function () {
+            // Afficher le message à l'oral
+            speak("Vous avez choisi de communiquer. Veuillez saisir votre message ou votre email.");
+
+            // Afficher le formulaire de message
+            messageForm.style.display = 'block';
+
+            // Afficher le formulaire d'email
+            emailForm.style.display = 'block';
+        });
+
+        // Fonction pour lire du texte à l'oral
+        function speak(text) {
+            var synth = window.speechSynthesis;
+            var utterance = new SpeechSynthesisUtterance(text);
+            synth.speak(utterance);
+        }
+    });
+</script>
+
+</body>
