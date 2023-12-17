@@ -114,3 +114,39 @@ body {
     flex-direction: column;
     align-items: flex-start;
 }
+#gym-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.gym-item {
+    width: 30%;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gym-info {
+    text-align: center;
+    padding: 10px;
+}
+
+.gym-info img {
+    max-width: 80%;
+    height: auto;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
