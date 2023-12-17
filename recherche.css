@@ -1,3 +1,97 @@
+
+
+
+
+
+
+
+
+
+#header {
+    color: black;
+    text-align: center;
+    padding: 5px;
+    font-size:15px;
+    position: relative;
+}
+#header img {
+    position: absolute; /* Position the image absolute within the header */
+    top: 50%; /* Align to the middle of the header */
+    left: 90%; /* Align to the center of the header */
+    transform: translate(-50%, -50%); /* Center the image */
+    width: 200px;
+    height: 100px;
+}
+
+
+.banner {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+}
+.banner a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+}
+.login-form {
+    display: inline-block;
+}
+
+
+
+
+#logo{
+
+    height: 20px;
+    top: 30px;
+    left: 10px;
+
+}
+
+
+#nav {
+    line-height: 10px;
+    background-color: lightgrey;
+    color: darkseagreen;
+    height: 50px;
+    width: 100%;
+    float: left;
+    padding: 5px;
+    border: 10px #eeeeee;
+    font-size:25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+.nav-button {
+    background-color: #38b44b;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 40px; /* Coins arrondis */
+    cursor: pointer;
+    text-decoration: none;
+}
+.nav-button:hover {
+    background-color: #2c8533;
+}
+
+
+
+
+
+
+
+
+
+
 .banner {
     background-color: #f0f0f0;
     padding: 10px;
@@ -21,6 +115,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     overflow: hidden;
+    background-image: url('recherche.jpg');
 }
 
 #background-image {
@@ -34,104 +129,3 @@ body {
     z-index: -1;
 }
 
-#login-section {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-}
-
-.banner {
-    background-color: #f0f0f0;
-    padding: 10px;
-    text-align: center;
-}
-
-.banner a {
-    text-decoration: none;
-    color: #333;
-}
-
-.login-form {
-    display: inline-block;
-}
-
-
-
-
-#nav {
-    line-height: 10px;
-    background-color: lightgrey;
-    color: darkseagreen;
-    height: 50px;
-    width: 100%;
-    float: left;
-    padding: 5px;
-    border: 10px #eeeeee;
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
-
-.nav-button {
-    background-color: #38b44b;
-    color: white;
-    border: none;
-    padding: 10px 30px;
-    text-align: center;
-    display: inline-block;
-    font-size: 20px;
-    border-radius: 40px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.nav-button:hover {
-    background-color: #2c8533;
-}
-
-#header {
-    color: white;
-    text-align: center;
-    padding: 5px;
-    font-size: 25px;
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#logo {
-    text-align: left;
-    margin-right: 10px; /* Espace entre le logo et le texte */
-}
-
-.header-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-
-.search-container {
-    text-align: center;
-    margin-top: 150px;
-}
-
-#search-input {
-    padding: 10px;
-    font-size: 16px;
-}
-
-#search-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #38b44b;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}

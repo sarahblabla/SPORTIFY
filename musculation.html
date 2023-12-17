@@ -98,44 +98,8 @@
             cursor: pointer;
         }
 
-        #calendar-title {
-            font-size: 20px;
-
-            width: 100%;
-            text-align: center;
-        }
-
-        #calendar-container {
-            max-width: 600px;
-            width: 100%;
-            margin: 0 auto;
-        }
 
 
-        .day {
-            display: inline-block;
-            width: 14.28%; /* 100% / 7 jours */
-            box-sizing: border-box;
-            padding: 10px;
-            text-align: center;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            background-color: #fff;
-        }
-
-        .not-available {
-            background-color: #ccc;
-        }
-
-        .available {
-            background-color: #4caf50;
-            color: #fff;
-        }
-
-        .taken {
-            background-color: #ff9800;
-            color: #fff;
-        }
     </style>
 </head>
 <body>
@@ -175,52 +139,7 @@
         }
     }
     </script>
-<div id="calendar-title">Calendrier du Coach</div>
 
-<div id="calendar-container"></div>
-<script>
-    const disponibiliteCoach = {
-        "2023-12-01": "not-available",
-        "2023-12-05": "available",
-        "2023-12-10": "taken",
-        "2023-12-15": "available",
-        "2023-12-20": "not-available",
-        "2023-12-25": "available",
-        "2023-12-30": "taken",
-    };
-    function createCalendar(year, month) {
-        const calendarContainer = document.getElementById("calendar-container");
-        calendarContainer.innerHTML = ""; // Efface le contenu existant
-
-        const daysInMonth = new Date(year, month + 1, 0).getDate();
-
-        for (let day = 1; day <= daysInMonth; day++) {
-            const date = new Date(year, month, day);
-            const dayElement = document.createElement("div");
-            dayElement.classList.add("day");
-
-            const isoDate = date.toISOString().split('T')[0];
-            const availability = disponibiliteCoach[isoDate];
-
-            dayElement.textContent = day;
-            if (availability === "not-available") {
-                dayElement.classList.add("not-available");
-            } else if (availability === "available") {
-                dayElement.classList.add("available");
-            } else if (availability === "taken") {
-                dayElement.classList.add("taken");
-            }
-
-            calendarContainer.appendChild(dayElement);
-        }
-    }
-
-    createCalendar(2023, 11);
-
-
-
-
-</script>
 
 </body>
 </html>

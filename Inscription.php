@@ -31,7 +31,7 @@ if ($result && $result->num_rows > 0) {
     echo "Le nom_utilisateur est déjà utilisé. Veuillez en choisir un autre.";
 } else {
     // Requête pour insérer les données dans la base de données
-    $insert_query = "INSERT INTO client (nom_utilisateur, nom, prenom, courriel, mdp, adresse, telephone) VALUES ('$nom_utilisateur', '$nom', '$prenom', '$courriel', '$mdp', '$adresse', '$telephone', '$info_de_paiement',;
+    $insert_query = "INSERT INTO client (nom_utilisateur, nom, prenom, courriel, mdp, adresse, telephone,info_de_paiement) VALUES ('$nom_utilisateur', '$nom', '$prenom', '$courriel', '$mdp', '$adresse', '$telephone', '$info_de_paiement')";
 
     if ($conn->query($insert_query) === TRUE) {
         echo "Inscription réussie !";

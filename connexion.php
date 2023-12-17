@@ -6,8 +6,8 @@ $expected_username = 'nom_utilisateur';
 $expected_password = 'mdp';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = isset($_POST['username']) ? $_POST['username'] : '';
-    $password = isset($_POST['password']) ? $_POST['password'] : '';
+    $username = isset($_POST['nom_utilisateur']) ? $_POST['nom_utilisateur'] : '';
+    $password = isset($_POST['mdp']) ? $_POST['mdp'] : '';
 
     if ($username === $expected_username && $password === $expected_password) {
         // Définir les informations de session
