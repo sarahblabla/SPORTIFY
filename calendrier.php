@@ -1,3 +1,15 @@
+
+<?php
+// Récupérer les paramètres d'URL
+$idCoach = isset($_GET['idCoach']) ? $_GET['idCoach'] : null;
+$idclient = isset($_GET['idclient']) ? $_GET['idclient'] : null;
+$salle = isset($_GET['salle']) ? $_GET['salle'] : null;
+$adresse = isset($_GET['adresse']) ? $_GET['adresse'] : null;
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,11 +85,6 @@
     }
 
     // ID du coach (à changer selon le coach souhaité)
-    $idCoach = 1;
-    $idclient = 1;
-    $salle = Salle_de_muscu;
-
-    $adresse =Allée_de_la_muscu;
 
 
     // Requête SQL pour récupérer les disponibilités du coach
@@ -140,14 +147,24 @@
 <div id="reservation-form">
     <h2>Réserver un créneau</h2>
     <form action="" method="post">
+        <!-- Ajout des champs pour la réservation -->
+        <input type="hidden" name="idcoach" value="<?php echo $idCoach; ?>">
+        <input type="hidden" name="idclient" value="<?php echo $idclient; ?>">
+        <input type="hidden" name="salle" value="<?php echo $salle; ?>">
+        <input type="hidden" name="adresse" value="<?php echo $adresse; ?>">
+        <!-- Fin des ajouts -->
         <button type="submit" name="reservation">Réserver</button>
     </form>
 </div>
 
+<!-- Ajout du script pour afficher le formulaire de réservation -->
 <script>
-    $insert_query = "INSERT INTO rendezvous (idclient, idcoach, date, heure_debut, adresse, salle) VALUES ('$idclient', '$idcoach', '$date','$heure', '$adresse', '$salle')";
 
+    function showReservationForm() {
+        document.getElementById('reservation-form').style.display = 'block';
+    }
 </script>
 
 </body>
 </html>
+

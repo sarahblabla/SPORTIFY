@@ -1,3 +1,12 @@
+
+<?php
+// Supposons que vous ayez récupéré ces informations lors de la connexion
+$idCoach = 1;
+$idclient = 1;
+$salle = "Salle_de_muscu";
+$adresse = "Allée_de_la_muscu";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,9 +106,6 @@
             border-radius: 5px;
             cursor: pointer;
         }
-
-
-
     </style>
 </head>
 <body>
@@ -124,7 +130,12 @@
         <textarea id="chat-input" placeholder="Commencez à tchater avec votre coach..."></textarea>
         <button id="send-button" onclick="sendMessage()">Envoyer</button>
     </div>
+
+    <!-- Ajout du bouton pour voir les disponibilités du coach -->
+    <a href="calendrier.php?idCoach=1&idclient=1&salle=Salle_de_muscu&adresse=Allée_de_la_muscu" class="nav-button">Voir les disponibilités du coach</a>
+
 </div>
+
 <script>
     function sendMessage() {
         var messageInput = document.getElementById("chat-input");
@@ -138,8 +149,29 @@
             messageInput.value = ""; // Efface le contenu de la zone de texte après l'envoi
         }
     }
-    </script>
-
+</script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
