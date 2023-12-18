@@ -1,0 +1,142 @@
+html>
+<head>
+    <title> Coach Football </title>
+    <meta charset="utf-8">
+    <link href="coach_football.css.css" rel="stylesheet" type="text/css" />
+
+    <div id="nav">
+        <a href="acceuil.html" class="nav-button">Acceuil</a>
+        <a href="tout_parcourir.html" class="nav-button">Tout Parcourir</a>
+        <a href="rechercher.html" class="nav-button">Rechercher</a>
+        <a href="rdv.php" class="nav-button">Rendez-Vous</a>
+        <a href="votre_compte.html" class="nav-button">Votre Compte</a>
+    </div>
+
+</head>
+
+<body>
+
+<div id="coach-container">
+    <h1>Votre coach de basketball : </h1>
+    <p>Il vous accompagnera lors de vos entraînements et vous aidera à vous améliorer!</p>
+    <img id="coach-image" src="coach_football.jpg" alt="Votre Coach">
+
+    <div id="chat-box">
+        <div id="status-message"></div>
+        <ul id="message-list">
+            <li>Coach: Bonjour! Alors prêt pour une séance de foot ?</li>
+        </ul>
+        <textarea type="text" id="chat-input" placeholder="Commencez à tchater avec votre coach..."></textarea>
+        <button id="button" onclick="sendMessage()">Envoyer</button>
+        <button id="button" onclick="toggleVoiceMessage()">Commencer l'enregistrement vocal</button>
+    </div>
+
+</div>
+
+<script>
+    function sendMessage() {
+        var messageInput = document.getElementById("chat-input");
+        var messageList = document.getElementById("message-list");
+        var messageText = messageInput.value;
+
+        if (messageText.trim() !== "") {
+            var newMessage = document.createElement("li");
+            newMessage.textContent = "Vous: " + messageText;
+            messageList.appendChild(newMessage);
+            messageInput.value = ""; // Efface le contenu de la zone de texte après l'envoi
+        }
+    }
+
+    var isRecording = false;
+
+    function toggleVoiceMessage() {
+        var voiceButton = document.getElementById("voice-button");
+        var messageList = document.getElementById("message-list");
+        var statusMessageElement = document.getElementById("status-message");
+
+        if (!isRecording) {
+            // Début de l'enregistrement vocal
+            isRecording = true;
+            voiceButton.textContent = "Arrêter l'enregistrement vocal";
+
+            updateStatusMessage("Début de l'enregistrement vocal...");
+
+            // Simuler l'enregistrement vocal (remplacez cela par votre logique d'enregistrement réelle)
+            simulateVoiceRecording(function(transcript) {
+                var newMessage = document.createElement("li");
+                newMessage.textContent = "Vous (Voice): " + transcript;
+                newMessage.classList.add("voice-message");
+                messageList.appendChild(newMessage);
+
+                updateStatusMessage("Fin de l'enregistrement vocal. Appuyez pour envoyer le message.");
+
+                voiceButton.textContent = "Envoyer le message vocal";
+            });
+        } else {
+            // Fin de l'enregistrement vocal et envoi du message
+            isRecording = false;
+            voiceButton.textContent = "Commencer l'enregistrement vocal";
+
+            // Simuler l'envoi du message vocal (remplacez cela par votre logique d'envoi réelle)
+            simulateVoiceSending(function() {
+                updateStatusMessage("Message vocal envoyé!");
+            });
+        }
+    }
+
+    function simulateVoiceRecording(callback) {
+        // Simuler l'enregistrement vocal avec un délai de 3 secondes
+        setTimeout(function() {
+            // Simuler la transcription (remplacez cela par votre logique de transcription réelle)
+            var transcript = "Ceci est la transcription du message vocal.";
+            callback(transcript);
+        }, 3000);
+    }
+
+    function simulateVoiceSending(callback) {
+        // Simuler l'envoi du message vocal avec un délai de 2 secondes
+        setTimeout(function() {
+            callback();
+        }, 2000);
+    }
+
+    function updateStatusMessage(message) {
+        var statusMessageElement = document.getElementById("status-message");
+        if (statusMessageElement) {
+            statusMessageElement.textContent = message;
+        }
+    }
+</script>
+
+<div class="Email">
+    <form id="emailForm" action="Email.php" method="post">
+        <label for="email">Adresse e-mail :</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <br>
+        <label for="subject">Objet :</label>
+        <input type="text" id="subject" name="subject" required>
+        <br>
+        <br>
+        <label for="message">Message :</label>
+        <br>
+        <br>
+        <textarea id="message" name="message" required></textarea>
+        <br>
+        <br>
+        <button id="button" type="submit" >Envoyer</button>
+    </form>
+</div>
+
+<div class="Appel">
+    <form action="Appel.php" method="post">
+        <label for="phone">Numéro de téléphone :</label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+        <br>
+        <br>
+        <button id="button" type="submit" >Appel</button>
+    </form>
+</div>
+
+</body>
+
