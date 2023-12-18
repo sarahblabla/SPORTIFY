@@ -1,3 +1,11 @@
+<?php
+// Supposons que vous ayez récupéré ces informations lors de la connexion
+$idCoach = 6;
+$idclient = 1;
+$salle = "Salle de Biking";
+$adresse = "Allée_de_la_muscu";
+?>
+
 <html>
 <head>
     <title> Coach Football </title>
@@ -19,7 +27,8 @@
 <div id="coach-container">
     <h1>Votre coach de Football : </h1>
     <p>Il vous accompagnera lors de vos entraînements et vous aidera à vous améliorer!</p>
-    <img id="coach-image" src="coach_football.jpg" alt="Votre Coach">
+    <a href="cv.php?idCoach=6" id="coach-image-link">
+    <img id="coach-image" src="cristiano.jpg" alt="Votre Coach">
 
     <div id="chat-box">
         <div id="status-message"></div>
@@ -137,6 +146,9 @@
         <button id="button" type="submit" >Appel</button>
     </form>
 </div>
+
+<!-- Ajout du bouton pour voir les disponibilités du coach -->
+<a href="calendrier.php?idCoach=6&idclient=1&salle=Salle_de_muscu&adresse=Allée_de_la_muscu" class="nav-button">Voir les disponibilités du coach</a>
 
 </body>
 
