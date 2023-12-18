@@ -41,7 +41,7 @@
                 <p><strong>Téléphone :</strong> +0123456789</p>
                 <p><strong>Email :</strong> contact@spotifysport.com</p>
               </div>
-              
+
             </div>
 
     </div>
@@ -50,24 +50,24 @@
     document.addEventListener('DOMContentLoaded', function () {
   let currentImage = 0;
   const images = document.querySelectorAll('.bordure-interieure-milieu2 img');
-  
+
   function showImage(index) {
     for (let i = 0; i < images.length; i++) {
       images[i].style.display = 'none';
     }
     images[index].style.display = 'block';
   }
-  
+
   function changeImage() {
     currentImage = (currentImage + 1) % images.length;
     showImage(currentImage);
   }
-  
+
   setInterval(changeImage, 4000); // Change l'image toutes les 4 secondes
 });
 
-</script>    
-    
+</script>
+
 </body>
 </html>
 
