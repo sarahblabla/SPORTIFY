@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b965367-dbe7-4c85-8d78-872393c1e53a" name="Changes" comment="karousel v2">
+    <list default="true" id="8b965367-dbe7-4c85-8d78-872393c1e53a" name="Changes" comment="accueil">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acceuil.css" beforeDir="false" afterPath="$PROJECT_DIR$/acceuil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acceuil.html" beforeDir="false" afterPath="$PROJECT_DIR$/acceuil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services_gym1.html" beforeDir="false" afterPath="$PROJECT_DIR$/services_gym1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +77,7 @@
       <workItem from="1702809809101" duration="613000" />
       <workItem from="1702824396365" duration="13640000" />
       <workItem from="1702910078795" duration="1568000" />
-      <workItem from="1702917699106" duration="15207000" />
+      <workItem from="1702917699106" duration="16055000" />
     </task>
     <task id="LOCAL-00001" summary="image">
       <option name="closed" value="true" />
@@ -168,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702933359287</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="accueil">
+      <option name="closed" value="true" />
+      <created>1702936428579</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702936428579</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +188,7 @@
     <MESSAGE value="recherch" />
     <MESSAGE value="recherche" />
     <MESSAGE value="karousel v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="karousel v2" />
+    <MESSAGE value="accueil" />
+    <option name="LAST_COMMIT_MESSAGE" value="accueil" />
   </component>
 </project>
