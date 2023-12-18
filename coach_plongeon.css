@@ -1,0 +1,168 @@
+body {
+    background: url('neige.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nav {
+    line-height: 10px;
+    background-color: #eeeeee;
+    color: green;
+    height: 70px;
+    width: 100%;
+    float: left;
+    padding: 5px;
+    border: 1px #eeeeee;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-button {
+    background-color: forestgreen;
+    color: white;
+    border: none;
+    padding: 20px 60px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+#coach-container {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#coach-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+#chat-box {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#message-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#message-list li {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+#chat-input {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+#calendar-title {
+    font-size: 20px;
+
+    width: 100%;
+    text-align: center;
+}
+
+#calendar-container {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.day {
+    display: inline-block;
+    width: 14.28%; /* 100% / 7 jours */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.not-available {
+    background-color: #ccc;
+}
+
+.available {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.taken {
+    background-color: #ff9800;
+    color: #fff;
+}
+
+
+.user-message {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.voice-message {
+    background-color: lightblue;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+.Email{
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.Appel{
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#button {
+    background-color: forestgreen;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
