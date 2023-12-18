@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b965367-dbe7-4c85-8d78-872393c1e53a" name="Changes" comment="recherche">
+    <list default="true" id="8b965367-dbe7-4c85-8d78-872393c1e53a" name="Changes" comment="karousel v2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/acceuil.css" beforeDir="false" afterPath="$PROJECT_DIR$/acceuil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recherche.php" beforeDir="false" afterPath="$PROJECT_DIR$/recherche.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acceuil.html" beforeDir="false" afterPath="$PROJECT_DIR$/acceuil.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +78,7 @@
       <workItem from="1702809809101" duration="613000" />
       <workItem from="1702824396365" duration="13640000" />
       <workItem from="1702910078795" duration="1568000" />
-      <workItem from="1702917699106" duration="12457000" />
+      <workItem from="1702917699106" duration="15207000" />
     </task>
     <task id="LOCAL-00001" summary="image">
       <option name="closed" value="true" />
@@ -160,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702928809310</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="karousel v2">
+      <option name="closed" value="true" />
+      <created>1702933359287</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702933359287</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +180,7 @@
     <MESSAGE value="salle de sport et services" />
     <MESSAGE value="recherch" />
     <MESSAGE value="recherche" />
-    <option name="LAST_COMMIT_MESSAGE" value="recherche" />
+    <MESSAGE value="karousel v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="karousel v2" />
   </component>
 </project>
