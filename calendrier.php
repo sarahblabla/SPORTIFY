@@ -1,42 +1,3 @@
-<?php
-// Récupérer les paramètres d'URL
-$idCoach = isset($_GET['idCoach']) ? $_GET['idCoach'] : null;
-$idclient = isset($_GET['idclient']) ? $_GET['idclient'] : null;
-$salle = isset($_GET['salle']) ? $_GET['salle'] : null;
-$adresse = isset($_GET['adresse']) ? $_GET['adresse'] : null;
-
-// Récupérer les données du formulaire s'il est soumis
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Connexion à la base de données
-    $serveur = "localhost";
-    $nomUtilisateur = "root";
-    $mdp = "";
-    $nomBaseDeDonnees = "sportify";
-
-    $connexion = new mysqli($serveur, $nomUtilisateur, $mdp, $nomBaseDeDonnees);
-
-    // Vérifier la connexion
-    if ($connexion->connect_error) {
-        die("Échec de la connexion à la base de données : " . $connexion->connect_error);
-    }
-
-    // Récupérer les données du formulaire
-    $jour = $_POST["jour"];
-    $heure = $_POST["heure"];
-
-    // Ajouter le rendez-vous dans la table rendezvous
-    $ajoutRendezVous = "INSERT INTO rendezvous (idclient, idcoach, date, heure_debut) VALUES ('$idclient', '$idCoach', '$jour', '$heure')";
-
-    if ($connexion->query($ajoutRendezVous) === TRUE) {
-        echo "Rendez-vous ajouté avec succès !";
-    } else {
-        echo "Erreur lors de l'ajout du rendez-vous : " . $connexion->error;
-    }
-
-    // Fermer la connexion à la base de données
-    $connexion->close();
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -90,6 +51,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nomUtilisateur = "root";
     $mdp = "";
     $nomBaseDeDonnees = "sportify";
+    // Récupérer les paramètres d'URL
+    $idCoach = isset($_GET['idCoach']) ? $_GET['idCoach'] : null;
+    $idclient = isset($_GET['idclient']) ? $_GET['idclient'] : null;
+    $salle = isset($_GET['salle']) ? $_GET['salle'] : null;
+    $adresse = isset($_GET['adresse']) ? $_GET['adresse'] : null;
 
     $connexion = new mysqli($serveur, $nomUtilisateur, $mdp, $nomBaseDeDonnees);
 
@@ -139,14 +105,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         }
                     }
                 }
-
-
                 echo "<div class='time-slot ";
-                // Ajouter la classe en fonction de la disponibilité
-                echo $plageDisponible ? "available' onclick='showReservationForm()'" : "not-available";
+// Ajouter la classe en fonction de la disponibilité
+                echo $plageDisponible ? "available' onclick='showReservationForm(\"$jour\", \"$heure\", this)'" : "not-available";
                 echo "'>";
                 echo $heure . ":00 - " . ($heure + 1) . ":00";
                 echo "</div>";
+
+
             }
             echo "</div>";
         }
@@ -160,36 +126,57 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Ajouter le rendez-vous dans la table rendezvous
         $ajoutRendezVous = "INSERT INTO rendezvous (idclient, idcoach, date, heure_debut) VALUES ('$idclient', '$idCoach', CURDATE(), '$heure')";
-
         if ($connexion->query($ajoutRendezVous) === TRUE) {
             echo "Rendez-vous ajouté avec succès !";
+
+            // Supprimer la disponibilité réservée
+            $supprimerDisponibilite = "DELETE FROM disponibilite WHERE idcoach = '$idCoach' AND jour = '$jour' AND heure_debut = '$heure'";
+            if ($connexion->query($supprimerDisponibilite) === TRUE) {
+                echo "Disponibilité mise à jour avec succès !";
+            } else {
+                echo "Erreur lors de la mise à jour de la disponibilité : " . $connexion->error;
+            }
         } else {
             echo "Erreur lors de l'ajout du rendez-vous : " . $connexion->error;
         }
+
     }
-
-
-    // Fermer la connexion à la base de données
+  // Fermer la connexion à la base de données
     $connexion->close();
     ?>
 </div>
 
 <!-- Ajouter le formulaire pour ajouter un rendez-vous -->
 <div id="reservation-form" style="display: none;">
-
-    <input type="submit" value="Réserver">
-
+    <form method="post">
+        <label for="jour">Jour :</label>
+        <input type="text" name="jour" id="jour" readonly>
+        <label for="heure">Heure :</label>
+        <input type="text" name="heure" id="heure" readonly>
+        <input type="submit" value="Réserver">
+    </form>
 </div>
 
 <script>
-    function showReservationForm(jour, heure) {
+    function showReservationForm(jour, heure, element) {
         // Remplir les champs du formulaire avec les données du créneau sélectionné
         document.getElementById('jour').value = jour;
         document.getElementById('heure').value = heure;
 
+        // Changer la couleur du créneau
+        var selectedTimeSlot = document.querySelector('.selected-time-slot');
+        if (selectedTimeSlot) {
+            selectedTimeSlot.classList.remove('selected-time-slot');
+        }
+
+        // Ajouter la classe au créneau sélectionné
+        element.classList.add('selected-time-slot');
+
         // Afficher le formulaire
         document.getElementById('reservation-form').style.display = 'block';
     }
+
+
 </script>
 
 </body>
