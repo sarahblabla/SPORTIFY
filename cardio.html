@@ -22,7 +22,7 @@ $adresse = "Allée_de_la_muscu";
         <span>Bienvenue sur Votre Site !</span>
         <div class="login-form">
             <a href="#login">Se connecter</a>
-            <a href="#signup">S'inscrire</a>
+            <a href="Inscription.html">S'inscrire</a>
         </div>
     </div>
 
@@ -205,20 +205,7 @@ $adresse = "Allée_de_la_muscu";
 
 </div>
 
-<script>
-    function sendMessage() {
-        var messageInput = document.getElementById("chat-input");
-        var messageList = document.getElementById("message-list");
-        var messageText = messageInput.value;
 
-        if (messageText.trim() !== "") {
-            var newMessage = document.createElement("li");
-            newMessage.textContent = "Vous: " + messageText;
-            messageList.appendChild(newMessage);
-            messageInput.value = ""; // Efface le contenu de la zone de texte après l'envoi
-        }
-    }
-</script>
 
 </body>
 </html>
