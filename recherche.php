@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 echo '<meta charset="utf-8">';
 
 $database = "sportify";
-$db_handle = mysqli_connect('localhost', 'root', '', $database);
+$db_handle = mysqli_connect('localhost', 'root', 'root', $database);
 
 // Vérifier la connexion
 if (!$db_handle) {
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $searchQuery = mysqli_real_escape_string($db_handle, $_POST["search"]);
 
     // Use prepared statements to prevent SQL injection
-    $sql = "SELECT * FROM coach WHERE nom LIKE '%$searchQuery%' OR prenom LIKE '%$searchQuery%' OR fonction LIKE '%$searchQuery%' OR specialite LIKE '%$searchQuery%'";
+    $sql = "SELECT * FROM coach WHERE salle LIKE ? OR nom LIKE ? OR prenom LIKE ? OR fonction LIKE ? OR specialite LIKE ?";
     $stmt = mysqli_prepare($db_handle, $sql);
     mysqli_stmt_bind_param($stmt, 'sssss', $searchQuery, $searchQuery, $searchQuery, $searchQuery, $searchQuery);
     mysqli_stmt_execute($stmt);
