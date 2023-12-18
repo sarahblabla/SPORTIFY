@@ -74,3 +74,13 @@ body {
     object-fit: cover; /* Pour maintenir les proportions de l'image et couvrir complètement le conteneur */
 }
 
+.texte-droite{
+    font-size: 24px;
+    font-weight: bold; /* Met le texte en gras */
+    font-family: 'Didot', sans-serif;
+}
+.bordure-interieure-bas{
+    font-size: 24px;
+    font-weight: bold; /* Met le texte en gras */
+    font-family: 'Didot', sans-serif;
+}
