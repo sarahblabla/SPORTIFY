@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b965367-dbe7-4c85-8d78-872393c1e53a" name="Changes" comment="salle de sport et services">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recherche.php" beforeDir="false" afterPath="$PROJECT_DIR$/recherche.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rechercher.html" beforeDir="false" afterPath="$PROJECT_DIR$/rechercher.html" afterDir="false" />
-    </list>
+    <list default="true" id="8b965367-dbe7-4c85-8d78-872393c1e53a" name="Changes" comment="recherch" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +74,7 @@
       <workItem from="1702809809101" duration="613000" />
       <workItem from="1702824396365" duration="13640000" />
       <workItem from="1702910078795" duration="1568000" />
-      <workItem from="1702917699106" duration="7700000" />
+      <workItem from="1702917699106" duration="8008000" />
     </task>
     <task id="LOCAL-00001" summary="image">
       <option name="closed" value="true" />
@@ -129,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702842404111</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="recherch">
+      <option name="closed" value="true" />
+      <created>1702927779101</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702927779101</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +142,7 @@
     <MESSAGE value="Page salles de sport en cours" />
     <MESSAGE value="image" />
     <MESSAGE value="salle de sport et services" />
-    <option name="LAST_COMMIT_MESSAGE" value="salle de sport et services" />
+    <MESSAGE value="recherch" />
+    <option name="LAST_COMMIT_MESSAGE" value="recherch" />
   </component>
 </project>
