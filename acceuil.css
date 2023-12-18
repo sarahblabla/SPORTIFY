@@ -68,3 +68,9 @@ body {
     background-size: cover;
     margin: 0; /* Pour supprimer la marge par défaut du body */
 }
+.bordure-interieure-milieu2 img {
+    width: 40%; /* Pour que les images occupent la largeur complète du conteneur */
+    height: 40%; /* Remplacez 200px par la hauteur souhaitée pour toutes les images */
+    object-fit: cover; /* Pour maintenir les proportions de l'image et couvrir complètement le conteneur */
+}
+
