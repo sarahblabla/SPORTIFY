@@ -1,4 +1,3 @@
-
 <?php
 // Récupérer les paramètres d'URL
 $idCoach = isset($_GET['idCoach']) ? $_GET['idCoach'] : null;
@@ -6,9 +5,38 @@ $idclient = isset($_GET['idclient']) ? $_GET['idclient'] : null;
 $salle = isset($_GET['salle']) ? $_GET['salle'] : null;
 $adresse = isset($_GET['adresse']) ? $_GET['adresse'] : null;
 
+// Récupérer les données du formulaire s'il est soumis
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Connexion à la base de données
+    $serveur = "localhost";
+    $nomUtilisateur = "root";
+    $mdp = "";
+    $nomBaseDeDonnees = "sportify";
 
+    $connexion = new mysqli($serveur, $nomUtilisateur, $mdp, $nomBaseDeDonnees);
+
+    // Vérifier la connexion
+    if ($connexion->connect_error) {
+        die("Échec de la connexion à la base de données : " . $connexion->connect_error);
+    }
+
+    // Récupérer les données du formulaire
+    $jour = $_POST["jour"];
+    $heure = $_POST["heure"];
+
+    // Ajouter le rendez-vous dans la table rendezvous
+    $ajoutRendezVous = "INSERT INTO rendezvous (idclient, idcoach, date, heure_debut) VALUES ('$idclient', '$idCoach', '$jour', '$heure')";
+
+    if ($connexion->query($ajoutRendezVous) === TRUE) {
+        echo "Rendez-vous ajouté avec succès !";
+    } else {
+        echo "Erreur lors de l'ajout du rendez-vous : " . $connexion->error;
+    }
+
+    // Fermer la connexion à la base de données
+    $connexion->close();
+}
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +44,7 @@ $adresse = isset($_GET['adresse']) ? $_GET['adresse'] : null;
     <meta charset="UTF-8">
     <title>Calendrier Semainier du Coach</title>
     <link rel="stylesheet" href="calendrier.css">
+
 
     <div id="logo">
         <h1>
@@ -50,6 +79,7 @@ $adresse = isset($_GET['adresse']) ? $_GET['adresse'] : null;
 
 </head>
 <body>
+
 
 <div id="calendar-title">Calendrier Semainier du Coach</div>
 
@@ -110,6 +140,7 @@ $adresse = isset($_GET['adresse']) ? $_GET['adresse'] : null;
                     }
                 }
 
+
                 echo "<div class='time-slot ";
                 // Ajouter la classe en fonction de la disponibilité
                 echo $plageDisponible ? "available' onclick='showReservationForm()'" : "not-available";
@@ -122,12 +153,44 @@ $adresse = isset($_GET['adresse']) ? $_GET['adresse'] : null;
     } else {
         echo "Aucune disponibilité trouvée pour ce coach.";
     }
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Récupérer les données du formulaire
+        $jour = $_POST["jour"];
+        $heure = $_POST["heure"];
+
+        // Ajouter le rendez-vous dans la table rendezvous
+        $ajoutRendezVous = "INSERT INTO rendezvous (idclient, idcoach, date, heure_debut) VALUES ('$idclient', '$idCoach', CURDATE(), '$heure')";
+
+        if ($connexion->query($ajoutRendezVous) === TRUE) {
+            echo "Rendez-vous ajouté avec succès !";
+        } else {
+            echo "Erreur lors de l'ajout du rendez-vous : " . $connexion->error;
+        }
+    }
+
 
     // Fermer la connexion à la base de données
     $connexion->close();
     ?>
 </div>
 
+<!-- Ajouter le formulaire pour ajouter un rendez-vous -->
+<div id="reservation-form" style="display: none;">
+
+    <input type="submit" value="Réserver">
+
+</div>
+
+<script>
+    function showReservationForm(jour, heure) {
+        // Remplir les champs du formulaire avec les données du créneau sélectionné
+        document.getElementById('jour').value = jour;
+        document.getElementById('heure').value = heure;
+
+        // Afficher le formulaire
+        document.getElementById('reservation-form').style.display = 'block';
+    }
+</script>
+
 </body>
 </html>
-
