@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['logged_in'] = true;
         
         // Redirection vers la page principale si les identifiants sont corrects
-        header('Location: page_principale.php');
+        header('Location: acceuil.html');
         exit();
     } else {
         $login_error = 'Identifiants incorrects. Veuillez réessayer.';

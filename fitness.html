@@ -1,78 +1,247 @@
+
+<?php
+// Supposons que vous ayez récupéré ces informations lors de la connexion
+$idCoach = 9;
+$idclient = 1;
+$salle = "Salle_de_muscu";
+$adresse = "Allée_de_la_muscu";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Fitness</title>
+
+
+
+
+    <div id="logo">
+        <h1>
+            <img src="sportify.png" alt="Musculation" width="200" height="100">
+        </h1>
+
+    </div>
+    <div class="banner">
+        <span>Bienvenue sur Votre Site !</span>
+        <div class="login-form">
+            <a href="#login">Se connecter</a>
+            <a href="#signup">S'inscrire</a>
+        </div>
+    </div>
+
+    <div id="header">
+        <h1>
+
+            Sportify: Activité Sportive  </h1>
+
+    </div>
+
+
+
+    <div id="nav">
+        <a href="acceuil.html" class="nav-button">Acceuil</a>
+        <a href="tout_parcourir.html" class="nav-button">Tout Parcourir</a>
+        <a href="rechercher.html" class="nav-button">Rechercher</a>
+        <a href="rdv.html" class="nav-button">Rendez-Vous</a>
+        <a href="votre_compte.html" class="nav-button">Votre Compte</a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <style>
-        body {
-            background: linear-gradient(to right, #BFEE90, #eeeeee); /* Ajout d'un dégradé de couleur en double fond */
-            margin: 0; /* Pour enlever la marge par défaut du body */
-            font-family: Arial, sans-serif; /* Choisir une police générique */
-        }
-
-        #coach-container {
+        #header {
+            color: black;
             text-align: center;
-            padding: 20px;
+            padding: 5px;
+            font-size:15px;
         }
 
-        #coach-image {
-            width: 200px; /* Ajustez la taille de l'image selon vos besoins */
-            height: 200px; /* Ajustez la taille de l'image selon vos besoins */
-            border-radius: 50%; /* Rendre l'image arrondie */
+        .banner {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
         }
 
+        .banner a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
+
+        .login-form {
+            display: inline-block;
+        }
+
+        #logo{
+
+            height: 20px;
+            top: 30px;
+            left: 10px;
+        }
 
 
         #nav {
             line-height: 10px;
-            background-color: #eeeeee;
-            color: green;
-            height: 70px;
+            background-color: lightgrey;
+            color: darkseagreen;
+            height: 50px;
             width: 100%;
             float: left;
             padding: 5px;
-            border: 1px #eeeeee;
+            border: 10px #eeeeee;
             font-size:25px;
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
+            text-decoration: none;
         }
 
+
         .nav-button {
-            background-color: forestgreen;
+            background-color: #38b44b;
             color: white;
             border: none;
-            padding: 20px 60px;
+            padding: 10px 30px;
             text-align: center;
             display: inline-block;
             font-size: 20px;
             border-radius: 40px; /* Coins arrondis */
             cursor: pointer;
+            text-decoration: none;
+        }
+        .nav-button:hover {
+            background-color: #2c8533;
+        }
+
+        body {
+            background: linear-gradient(to right, blueviolet, #eeeeee);
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
         }
 
 
 
+        #coach-container {
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #coach-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        #chat-box {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-width: 400px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        #message-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        #message-list li {
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+
+        #chat-input {
+            width: calc(100% - 20px);
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #send-button {
+            background-color: forestgreen;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #coach-image-link {
+            /* Ajoutez du style au lien si nécessaire */
+            text-decoration: none;
+            color: inherit;
+        }
     </style>
 </head>
 <body>
 
-<div id="nav">
-    <a href="acceuil.html" class="nav-button">Acceuil</a>
-    <a href="tout_parcourir.html" class="nav-button">Tout Parcourir</a>
-    <a href="rechercher.html" class="nav-button">Rechercher</a>
-    <a href="rdv.html" class="nav-button">Rendez-Vous</a>
-    <a href="votre_compte.html" class="nav-button">Votre Compte</a>
-</div>
-
-
-
-
 
 <div id="coach-container">
-    <h1>Votre coach : David</h1>
-    <p>Il vous accompagnera lors de vos entraînements et vous aidera à vous améliorer!</p>
-    <img id="coach-image" src="coach_fitness.jpg" alt="Votre Coach">
+    <h1>Votre coach de Fitness: Maria</h1>
+    <p>Elle vous aidera à atteindre vos objectifs!</p>
+    <a href="cv.html" id="coach-image-link">
+        <img id="coach-image" src="coach_fitness.jpg" alt="Votre Coach">
+    </a>
+    <div id="chat-box">
+        <ul id="message-list">
+            <!-- Exemple de message -->
+            <li>Coach: Salut, j'attends la prochaine séance de Fitness avec impatience!</li>
+        </ul>
+        <textarea id="chat-input" placeholder="Commencez à tchater avec votre coach..."></textarea>
+        <button id="send-button" onclick="sendMessage()">Envoyer</button>
+    </div>
+
+    <!-- Ajout du bouton pour voir les disponibilités du coach -->
+    <a href="calendrier.php?idCoach=4&idclient=1&salle=Salle_de_muscu&adresse=Allée_de_la_muscu" class="nav-button">Voir les disponibilités du coach</a>
+
 </div>
+
+<script>
+    function sendMessage() {
+        var messageInput = document.getElementById("chat-input");
+        var messageList = document.getElementById("message-list");
+        var messageText = messageInput.value;
+
+        if (messageText.trim() !== "") {
+            var newMessage = document.createElement("li");
+            newMessage.textContent = "Vous: " + messageText;
+            messageList.appendChild(newMessage);
+            messageInput.value = ""; // Efface le contenu de la zone de texte après l'envoi
+        }
+    }
+</script>
 
 </body>
 </html>
+

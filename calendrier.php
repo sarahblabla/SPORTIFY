@@ -16,7 +16,110 @@ $adresse = isset($_GET['adresse']) ? $_GET['adresse'] : null;
     <meta charset="UTF-8">
     <title>Calendrier Semainier du Coach</title>
 
+    <div id="logo">
+        <h1>
+            <img src="sportify.png" alt="Musculation" width="200" height="100">
+        </h1>
+
+    </div>
+    <div class="banner">
+        <span>Bienvenue sur Votre Site !</span>
+        <div class="login-form">
+            <a href="#login">Se connecter</a>
+            <a href="#signup">S'inscrire</a>
+        </div>
+    </div>
+
+    <div id="header">
+        <h1>
+
+            Sportify: Activité Sportive  </h1>
+
+    </div>
+
+
+
+    <div id="nav">
+        <a href="acceuil.html" class="nav-button">Acceuil</a>
+        <a href="tout_parcourir.html" class="nav-button">Tout Parcourir</a>
+        <a href="rechercher.html" class="nav-button">Rechercher</a>
+        <a href="rdv.html" class="nav-button">Rendez-Vous</a>
+        <a href="votre_compte.html" class="nav-button">Votre Compte</a>
+    </div>
+
     <style>
+
+        #header {
+            color: black;
+            text-align: center;
+            padding: 5px;
+            font-size:15px;
+        }
+
+        .banner {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .banner a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
+
+        .login-form {
+            display: inline-block;
+        }
+
+        #logo{
+
+            height: 20px;
+            top: 30px;
+            left: 10px;
+        }
+
+
+        #nav {
+            line-height: 10px;
+            background-color: lightgrey;
+            color: darkseagreen;
+            height: 50px;
+            width: 100%;
+            float: left;
+            padding: 5px;
+            border: 10px #eeeeee;
+            font-size:25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+
+
+        .nav-button {
+            background-color: #38b44b;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            text-align: center;
+            display: inline-block;
+            font-size: 20px;
+            border-radius: 40px; /* Coins arrondis */
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .nav-button:hover {
+            background-color: #2c8533;
+        }
+        body {
+            background: linear-gradient(to right, darkslategray, #eeeeee);
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
         #calendar-title {
             font-size: 20px;
             width: 100%;
