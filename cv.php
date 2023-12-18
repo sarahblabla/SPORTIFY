@@ -42,13 +42,21 @@ $CV = $row['CV'];
 
 // Affichez les informations du coach
 echo "<h1>CV de $prenom $nom</h1>";
+
+// Vérifiez si le fichier CV est une image JPG
     if (pathinfo($CV, PATHINFO_EXTENSION) === 'jpg') {
-        // Affichez l'image
-        echo "<img src='$CV' alt='CV de $prenom $nom'>";
+        // Spécifiez la largeur et la hauteur souhaitées
+        $largeur = 1400; // Remplacez par la largeur souhaitée en pixels
+        $hauteur = 2000; // Remplacez par la hauteur souhaitée en pixels
+
+        // Affichez l'image avec les attributs de largeur et hauteur
+        echo "<img src='$CV' alt='CV de $prenom $nom' width='$largeur' height='$hauteur'>";
     } else {
         // Si ce n'est pas un fichier JPG, affichez le lien vers le fichier
         echo "<a href='$CV'>Télécharger le CV</a>";
     }
+
+// ... (suite de votre code)
 
 
 // Vous pouvez ajouter d'autres informations ici en fonction de votre base de données
