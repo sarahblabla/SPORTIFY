@@ -1,12 +1,18 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">
+
 <head>
-    <title> Les sports de compétition </title>
     <meta charset="utf-8">
-    <link href="sport_de_competition.css" rel="stylesheet" type="text/css" />
+    <link href="activité_sportive.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sportify</title>
+
+
+
 
     <div id="logo">
         <h1>
-            <img src="sportify.png" alt="SPORTIFY" width="200" height="100">
+            <img src="sportify.png" alt="Musculation" width="200" height="100">
         </h1>
 
     </div>
@@ -19,80 +25,94 @@
     </div>
 
     <div id="header">
-        <h1> Sportify: Sport de compétition </h1>
+        <h1>
+
+            Sportify: Sport de compétitions. </h1>
+
     </div>
+
+
 
     <div id="nav">
         <a href="acceuil.html" class="nav-button">Acceuil</a>
         <a href="tout_parcourir.html" class="nav-button">Tout Parcourir</a>
         <a href="rechercher.html" class="nav-button">Rechercher</a>
-        <a href="rdv.html" class="nav-button">Rendez-Vous</a>
+        <a href="rdv.php" class="nav-button">Rendez-Vous</a>
         <a href="votre_compte.html" class="nav-button">Votre Compte</a>
     </div>
+
+
 
 </head>
 
 <body>
+<div id="intro">
+    <div class="intro-content">
 
-<div id="texte">
-    <p> Si vous aimez la compétition et voulez vous surpasser, vous etes au bonne endroit ! Viser les compétitions sportives nationales et internationales ! </p>
-    <p> Vous pouvez retrouver ci-dessous la liste des sports pouvant etre pratiqué en compétition proposé par l'établissement. </p>
-    <p> Pour retrouver les informations de chaque coach, des sports concerner, leurs disponibilité et leurs CV. Cliquez sur l'image du sport que vous souhaitez pratiquer.</p>
+        <h2>Bienvenue dans sports de compétitions !<img src="alteres.webp" alt="Musculation" alt=width="200" height="100"></h2>
+
+        <p> Si vous aimez la compétition et voulez vous surpasser, vous etes au bonne endroit ! Viser les compétitions sportives nationales et internationales ! </p>
+        <p> Vous pouvez retrouver ci-dessous la liste des sports pouvant etre pratiqué en compétition proposé par l'établissement. </p>
+        <p> Pour retrouver les informations de chaque coach, des sports concerner, leurs disponibilité et leurs CV. Cliquez sur l'image du sport que vous souhaitez pratiquer.</p>
+
+    </div>
 </div>
-
 
 
 <div id="section">
 
-    <ul id="sport-list">
-        <li class="sport-item">
-            <h2> Basketball </h2>
-            <a href="coach_basketball.html">
-                <img src="basketball.jpg" alt="Basketball" width="100" height="50"></img>
-            </a>
+    <table class="sport-list">
 
-        </li>
+        <tr>
+            <td class="sport-item">
+                <h2> Basketball </h2>
+                <a href="coach_basketball.html">
+                    <img src="basket.jpg" alt="Basketball" width="100" height="50">
+                </a>
+            </td>
 
-        <li class="sport-item">
-            <h2> Football </h2>
-            <a href="coach_football.html">
-                <img src="football.jpg" alt="Football"  width="100" height="50"></img>
-            </a>
-        </li>
+            <td class="sport-item">
+                <h2> Football </h2>
+                <a href="coach_football.html">
+                    <img src="football.jpg" alt="Football"  width="100" height="50">
+                </a>
+            </td>
 
-        <li class="sport-item">
-            <h2> Rugby </h2>
-            <a href="coach_rugby.html">
-                <img src="rugby.jpg" alt="Rugby"  width="100" height="50"></img>
-            </a>
+            <td class="sport-item">
+                <h2> Rugby </h2>
+                <a href="coach_rugby.html">
+                    <img src="rugby.jpg" alt="Rugby"  width="100" height="50">
+                </a>
+            </td>
 
-        </li>
+            <td class="sport-item">
+                <h2> Tennis </h2>
+                <a href="coach_tennis.html">
+                    <img src="tennis.jpg" alt="Tennis"  width="100" height="50" >
+                </a>
+            </td>
 
-        <li class="sport-item">
-            <h2> Tennis </h2>
-            <a href="coach_tennis.html">
-                <img src="tennis.jpg" alt="Tennis"  width="100" height="50" ></img>
-            </a>
-        </li>
+            <td class="sport-item">
+                <h2> Natation </h2>
+                <a href="coach_natation.html">
+                    <img src="natation.jpg" alt="Natation"  width="100" height="50">
+                </a>
+            </td>
 
-        <li class="sport-item">
-            <h2> Natation </h2>
-            <a href="coach_natation.html">
-                <img src="natation.jpg" alt="Natation"  width="100" height="50"></img>
-            </a>
-        </li>
+            <td class="sport-item">
+                <h2> Plongeon </h2>
+                <a href="coach_plongeon.html">
+                    <img src="plongeon.jpg" alt="Plongeon"  width="100" height="50">
+                </a>
+            </td>
+        </tr>
 
-        <li class="sport-item">
-            <h2> Plongeon </h2>
-            <a href="coach_plongeon.html">
-                <img src="plongeon.jpg" alt="Plongeon"  width="100" height="50"></img>
-            </a>
-        </li>
-    </ul>
+    </table>
 
 </div>
 
 <div id="footer">
 </div>
-
 </body>
+</html>
+

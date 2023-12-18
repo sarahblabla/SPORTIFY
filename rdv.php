@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link href="rendez_vous.css" rel="stylesheet" type="text/css" />
+    <link href="rdv.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sportify</title>
 
@@ -46,18 +46,32 @@
         <a href="votre_compte.html" class="nav-button">Votre Compte</a>
     </div>
 </head>
-<script>
-    function confirmerAnnulation() {
-        var confirmation = confirm("Voulez-vous vraiment annuler votre rendez-vous??");
-        if (confirmation) {
-            alert("Rendez-vous annulé");
-        } else {
-            alert("Retour");
-        }
-    }
-</script>
+
 <body>
-<button onclick="confirmerAnnulation()">Annuler Rendez-vous</button>
+<?php
+    // Connexion à la base de données
+    $serveur = "localhost";
+    $nomUtilisateur = "root";
+    $mdp = "";
+    $nomBaseDeDonnees = "sportify";
+
+    $connexion = new mysqli($serveur, $nomUtilisateur, $mdp, $nomBaseDeDonnees);
+
+    // Vérifier la connexion
+    if ($connexion->connect_error) {
+die("Échec de la connexion à la base de données : " . $connexion->connect_error);
+}
+
+// ID du coach (à changer selon le coach souhaité)
+
+
+// Requête SQL pour récupérer les disponibilités du coach
+$requete = "SELECT , heure_debut, heure_fin FROM disponibilite WHERE idcoach = $idCoach";
+
+// Exécution de la requête
+$resultat = $connexion->query($requete);
+?>
+
 
 </body>
 </html>
