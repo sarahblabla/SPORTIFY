@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 echo '<meta charset="utf-8">';
 
 $database = "sportify";
@@ -12,9 +16,12 @@ if (!$db_handle) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $searchQuery = mysqli_real_escape_string($db_handle, $_POST["search"]);
 
-    // Effectuer une seule requête pour récupérer tous les résultats
-    $sql = "SELECT * FROM coach WHERE salle LIKE '%$searchQuery%' OR nom LIKE '%$searchQuery%' OR prenom LIKE '%$searchQuery%' OR fonction LIKE '%$searchQuery%' OR specialite LIKE '%$searchQuery%'";
-    $result = mysqli_query($db_handle, $sql);
+    // Use prepared statements to prevent SQL injection
+    $sql = "SELECT * FROM coach WHERE salle LIKE ? OR nom LIKE ? OR prenom LIKE ? OR fonction LIKE ? OR specialite LIKE ?";
+    $stmt = mysqli_prepare($db_handle, $sql);
+    mysqli_stmt_bind_param($stmt, 'sssss', $searchQuery, $searchQuery, $searchQuery, $searchQuery, $searchQuery);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
 
     if ($result) {
         echo "<h2>Résultats de la recherche</h2>";
