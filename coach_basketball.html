@@ -1,10 +1,3 @@
-<!--coach:
-- CV
-- son nom
-- sa photo
-- son bureau
-- sa disponibilité durant la semaine php
-- Si le coach est disponible : possibilité d'envoyer un message texto, vocale, par visioconférence ou meme communiquer avec lui.-->
 <?php
 // Supposons que vous ayez récupéré ces informations lors de la connexion
 $idCoach = 7;
@@ -34,18 +27,18 @@ $adresse = "Allée_de_la_muscu";
 <div id="coach-container">
     <h1>Votre coach de basketball : </h1>
     <p>Il vous accompagnera lors de vos entraînements et vous aidera à vous améliorer!</p>
-    <a href="cv.php?idCoach=7" id="coach-image-link">
-    <img id="coach-image" src="stephen.jpg" alt="Votre Coach">
+    <a href="cv.php?idCoach=7" id="coach-image-link"></a>
+        <img id="coach-image" src="stephen.jpg" alt="Votre Coach">
 
-    <div id="chat-box">
-        <div id="status-message"></div>
-        <ul id="message-list">
-            <li>Coach: Bonjour! Alors prêt pour une séance de basket ?</li>
-        </ul>
-        <textarea type="text" id="chat-input" placeholder="Commencez à tchater avec votre coach..."></textarea>
-        <button id="button" onclick="sendMessage()">Envoyer</button>
-        <button id="button" onclick="toggleVoiceMessage()">Commencer l'enregistrement vocal</button>
-    </div>
+        <div id="chat-box">
+            <div id="status-message"></div>
+            <ul id="message-list">
+                <li>Coach: Bonjour! Alors prêt pour une séance de basket ?</li>
+            </ul>
+            <textarea type="text" id="chat-input" placeholder="Commencez à tchater avec votre coach..."></textarea>
+            <button id="button" onclick="sendMessage()">Envoyer</button>
+            <button id="button1" onclick="toggleVoiceMessage()">Commencer l'enregistrement vocal</button>
+        </div>
 
 </div>
 
@@ -140,22 +133,21 @@ $adresse = "Allée_de_la_muscu";
         <textarea id="message" name="message" required></textarea>
         <br>
         <br>
-        <button id="button" type="submit" >Envoyer</button>
+        <button id="button2" type="submit" >Envoyer</button>
     </form>
 </div>
 
 <div class="Appel">
     <form action="Appel.php" method="post">
-    <label for="phone">Numéro de téléphone :</label>
-    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+        <label for="phone">Numéro de téléphone :</label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
         <br>
         <br>
-        <button id="button" type="submit" >Appel</button>
-</form>
+        <button id="button3" type="submit" >Appel</button>
+    </form>
 </div>
 
 <!-- Ajout du bouton pour voir les disponibilités du coach -->
 <a href="calendrier.php?idCoach=7&idclient=1&salle=Salle_de_muscu&adresse=Allée_de_la_muscu" class="nav-button">Voir les disponibilités du coach</a>
 
 </body>
-
